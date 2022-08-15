@@ -1,0 +1,34 @@
+{% extends "index/index.html" %}
+{% block body %}
+                  
+                  
+                
+<form id="form1" name="form1" method="post" action="/uplview">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td width="76">S.No</td>
+        <td width="105">File name</td>
+        <td width="105">Date</td>
+        <!-- <td colspan="3"><a href="#"> Close</a></td> -->
+      </tr>
+        {% for row in data %}
+        
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td width="72" height="72"><a class="btn btn-danger" href="/delete/{{row[0]}}">remove </a></td>
+        <td width="75"><a class="btn btn-success" href="/download/{{row[0]}}">download</a></td>
+        <td width="64"><a class="btn btn-info" href="/shares/{{row[0]}}">share</a></td>
+      </tr>
+      
+      
+      {% endfor %}
+      
+      
+    
+  </table>
+</form>
+  {% endblock %}
+

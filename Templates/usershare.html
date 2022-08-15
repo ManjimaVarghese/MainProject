@@ -1,0 +1,35 @@
+{% extends "index/index.html" %}
+{% block body %}
+
+
+<form id="form1" name="form1" method="post">
+  <table  class="table table-bordered">
+    <tbody>
+      <tr>
+        <td width="76">S.No</td>
+        <td width="76">File Name</td>
+        <td width="76">Share type</td>
+        <td width="76">Date</td>
+        <td width="76">Uploaded Email</td>
+        <td width="76">Uploaded By</td>
+        <!-- <td width="76">Fileid</td> -->
+        <!-- <td width="48"><a href="#">OK</a></td> -->
+       <!-- <td width="60">&nbsp;</td>-->
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>&nbsp;{{loop.index}}</td>
+        <td>&nbsp;{{row[2]}}</td>
+        <td>&nbsp;{{row[0]}}</td>
+        <td>&nbsp;{{row[1]}}</td>
+        <td>&nbsp;{{row[4]}}</td>
+        <td>&nbsp;{{row[5]}}</td>
+        <td hidden>&nbsp;{{row[6]}}</td>
+        <td><a class="btn btn-info" href="/moreaddviews/{{row[0]}}/{{row[6]}}">More</a></td>
+        <td><a class="btn btn-success" href="/download/{{row[6]}}">Download</a></td>
+      </tr>
+        {% endfor%}
+    
+  </table>
+</form>
+{% endblock %}

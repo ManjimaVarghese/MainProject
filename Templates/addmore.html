@@ -1,0 +1,23 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/addmores">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td width="74">Name</td> <td width="167">{{data[0]}}</td>  </tr>
+        <tr>
+        <td>Number</td>
+        <td>{{data[1]}}</td></tr>
+        <tr><td>Image</td>
+        <td>{{data[2]}}</td></tr>
+        <tr>
+          <td><input type="submit" name="button" id="button" value="OK"></td>
+          <!--<td>&nbsp;</td>-->
+        </tr>
+
+   
+    
+  </table>
+  
+</form>
+ {% endblock %}

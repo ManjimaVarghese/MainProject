@@ -1,0 +1,33 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post"action="">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <!-- <td width="84">Search</td> -->
+          <!-- <input type="text" name="textfield" id="textfield"> -->
+          <!-- <input type="submit" class="btn btn-info" name="button" id="button" value="Search"></td> -->
+        <td align="right"><a class="btn btn-danger" href="/userhome">Cancel</a></td>
+      </tr>
+      </tbody>
+      </table>
+      <table class="table table-bordered">
+      <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Gender</td>
+        <!--<td>&nbsp;</td>-->
+      </tr>
+       {% for row in data %}
+      <tr>
+        <td>{{row[1]}}</td>
+        <td>{{row[3]}}</td>
+        <td height="26">{{row[4]}}</td>
+        <td><a class="btn btn-success" href="/addmembertogroup/{{row[0]}}">Add</a></td>
+      </tr>
+      
+       {% endfor %}
+    
+  </table>
+</form>
+{% endblock %}

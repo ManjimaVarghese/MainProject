@@ -1,0 +1,25 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post">
+  <table  class="table table-bordered">
+    <tbody>
+      <tr>
+        <td width="76">File Name</td>
+        <td width="76">Type</td>
+        <td width="76">File Date</td>
+        <td colspan="2"><a href="#">OK</a></td>
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>&nbsp;{{row[0]}}</td>
+        <td>&nbsp;{{row[1]}}</td>
+        <td>&nbsp;{{row[2]}}</td>
+        <td width="36"><p><a href="#">Delete</a></p></td>
+        <td width="37"><a href="#">Edit</a></td>
+      </tr>
+      {% endfor%}
+      
+    
+  </table>
+</form>
+{% endblock %}

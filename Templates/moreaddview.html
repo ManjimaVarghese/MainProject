@@ -1,0 +1,20 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post">
+  <table  class="table table-bordered">
+    <tbody>
+      <tr>
+        <!-- <td width="74" height="43">S.No</td> -->
+        <td width="78">&nbsp;Group Name</td>
+        <td width="78"><a href="/usershareview">OK</a></td><td hidden>{{data[0]}}</td>
+      </tr>
+      <tr>
+        
+        <!-- <td></td> -->
+        <td>&nbsp;{{data[1]}}</td>
+       <td>&nbsp;<a class="btn btn-success" href="/groupmemebersview/{{data[0]}}">Members</a></td>
+      </tr>
+
+  </table>
+</form>
+{% endblock %}

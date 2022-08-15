@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Casual Signup Form Flat Responsive widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Casual Signup Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- fonts -->
+
+<link href="//fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+<!-- /fonts -->
+<!-- css -->
+<link href="/static/webss/css/style.css" rel='stylesheet' type='text/css' media="all" />
+<!-- /css -->
+</head>
+<body>
+<h1 class="header-w3ls w3layouts w3 w3l agileinfo wthree w3-agileits">Signup Here</h1>
+<div class="content-w3ls">
+	<div class="agileits1">
+		<div class="w3-agileits">
+			<h3>Please Register Your Details</h3>
+			<form method="post" enctype="multipart/form-data" action="/frg">
+				<div class="form-control"> 
+					<label class="header">Name :</label>
+					<input type="text" id="companyname" name="name" placeholder="Enter Your Company Name" title="Please enter your Company Name" required="">
+					<div class="clear"></div>
+				</div>
+			
+				<div class="form-control">
+					<label class="header">Image :</label>
+					<input type="file" id="name" name="image"placeholder="Enter Your Name" title="Please enter your Name" required="">
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-control">	
+					<label class="header">Email Address :</label>
+					<input type="email" id="email" name="email" placeholder="mail@example.com" title="Please enter a valid email" required="">
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-control">	
+					<label class="header">Gender :</label>
+					<input style="margin-left: 160" type="radio" name="radio" value="Male">Male
+					<input style="margin-left: 60"type="radio" name="radio" value="Female">Female
+					<!-- <select name="radio" class="form-control">
+						<option value="Male">Male</option>
+						<option value="FeMale">FeMale</option>
+					</select> -->
+					<div class="clear"></div>
+				</div>
+			
+				<div class="form-control">
+					<label class="header">Date Of Birth :</label>
+					<input type="date" id="usrtel" name="date" placeholder="Your Date of birth" title="Please enter Your date of birth" required="">
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-control">
+					<label class="header">Address :</label>
+					<input type="text" id="usrtel" name="address" placeholder="Your Place" title="Please enter Your place details" required="">
+					<div class="clear"></div>
+				</div>
+
+
+
+
+				<div class="form-control">
+					<label class="header">Mobile Number :</label>
+					<input type="tel" id="usrtel" name="mobile" placeholder="Your Phone Number" title="Please enter Your Phone Number" required="">
+					<div class="clear"></div>
+				</div>
+			
+				<div class="form-control">	
+					<label class="header">Your Password :</label>
+					<input type="password" class="lock" name="password" placeholder="Enter Your Password" id="password1" required="">
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-control">		
+					<label class="header">Confirm Password :</label>
+					<input type="password" class="lock" name="confirm-password" placeholder="Re-Enter Your Password" id="password2" required="">
+					<div class="clear"></div>
+				</div>														
+				<input type="submit" class="register" value="Register">
+			</form>
+			<script type="text/javascript">
+				window.onload = function () {
+					document.getElementById("password1").onchange = validatePassword;
+					document.getElementById("password2").onchange = validatePassword;
+				}
+				function validatePassword(){
+					var pass2=document.getElementById("password2").value;
+					var pass1=document.getElementById("password1").value;
+					if(pass1!=pass2)
+						document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+					else
+						document.getElementById("password2").setCustomValidity('');	 
+						//empty string means no validation error
+				}
+			</script>
+		</div>
+	</div>	
+	<div class="agileits2">
+
+	</div>
+	<div class="clear"></div>
+</div>	
+<!-- <p class="copyright w3layouts w3 w3l agileits-w3layouts agile w3-agile">© 2017 Casual Signup Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p> -->
+</body>
+</html>
+

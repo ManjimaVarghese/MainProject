@@ -1,0 +1,24 @@
+{% extends "index/index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post">
+  <table  class="table table-bordered">
+    <tbody>
+      <tr>
+        <td width="76">S.No</td>
+        <td width="76">Goupname</td>
+        <!-- <td><a href="#">OK</a></td> -->
+        <!--<td>&nbsp;</td>-->
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>&nbsp;{{row[1]}}</td>
+        <td width="41"><a class="btn btn-info" href="/groupmemebersview/{{row[0]}}}">More</a></td>
+        <td width="61"><a class="btn btn-success" href="/addmembergroup/{{row[0]}}">Add member</a></td>
+      </tr>
+       {% endfor%}
+   
+  </table>
+</form>
+{% endblock %}

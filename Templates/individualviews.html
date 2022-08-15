@@ -1,0 +1,21 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post">
+  <table  class="table table-bordered">
+    <tbody>
+      <tr>
+        <td width="61">Filename</td> <td width="140">{{data[0]}}</td>  </tr>
+        <tr>
+        <td>Name</td><td>{{data[3]}}</td></tr>
+        <tr><td>Email</td><td>{{data[2]}}</td></tr>
+<tr><td>Date</td><td>{{data[1]}}</td></tr>
+<tr>
+  <td><a href="/usershareview">OK</a></td></tr>
+   
+      
+     
+    
+    
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "index/index.html" %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" >
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <td>
+        <a class="btn btn-info" href="/grpmembe">Groupshare</a></td>
+        
+        <!-- <td width="157" height="31"><input class="btn btn-info" type="button" name="button" id="button" value="Search"></td> -->
+        <td align="right">
+        <!-- <input class="form-control" name="textfield" type="text" id="textfield"></td> -->
+        <a class="btn btn-danger" href="/userhome">Cancel</a>
+      
+        </td>
+      </tr>
+      </tbody>
+      
+     </table>
+     <table class="table table-bordered">  
+        
+      <tr>
+        <td>S.No</td>
+        <td width="157">Name</td>
+      <td width="198">Email</td>
+      <!--<td></td>-->
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{loop.index}}</td>
+        <td>{{row[0]}}</td>
+      <td>{{row[1]}}</td>
+      <td><a class="btn btn-info" href="/shareinsert/{{fileid}}/{{row[2]}}">share</a></td>
+      </tr>
+       {% endfor%}
+      
+      
+    
+  
+  </table>
+</form>
+{% endblock %}

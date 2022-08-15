@@ -1,0 +1,23 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post">
+  <table  class="table table-bordered">
+    <tbody>
+      <tr>
+        <th>S.No</th>
+        <th>Members</td>
+        <th>Email</td>
+        <th><a href="/groupsview">OK</a></td>
+      </tr>
+      
+       {% for row in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>&nbsp;{{row[0]}}</td>
+        <td>&nbsp;{{row[1]}}</td>
+      </tr>
+       {% endfor%}
+    
+  </table>
+</form>
+{% endblock %}

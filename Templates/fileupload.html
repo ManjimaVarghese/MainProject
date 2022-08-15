@@ -1,0 +1,17 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="/upl">
+  <table class="table table-bordered" >
+    <tbody>
+      <tr>
+        <td width="150px">Filename</td>
+        <td><input type="file" class="form-control" name="filename" id="fileField" required></td>
+      </tr>
+      <tr>
+       <td></td>
+        <td><input class="btn btn-success" type="submit" name="submit" id="submit" value="Upload"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+{% endblock %}

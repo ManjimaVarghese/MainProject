@@ -1,0 +1,54 @@
+{% extends "index/index.html"%}
+ {%  block body %}
+           
+<form method="POST" enctype="multipart/form-data" action="/edit_post">
+  <table class="table table-bordered">
+    <tbody><tr><img src="{{ data[2] }}" width="25%"></tr>
+      <tr>
+        <td width="60">Name</td>
+        <td width="443"><input pattern="[A-Za-z .]{3,}" class="form-control" type="text" name="name" id="textfield" value="{{ data[1] }}" required></td>
+      </tr>
+      <tr>
+        <td>Image</td>
+        <td>
+        <input type="file" class="form-control" name="image" required></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" class="form-control" name="email" id="email" value="{{ data[3] }}" required></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td><input type="radio" name="radio" id="radio" value="Male" required>
+          Male
+          <input type="radio" name="radio" id="radio2" value="Female" required>
+          Female</td>
+      </tr>
+      <tr>
+        <td height="42">DOB</td>
+        <td><input class="form-control" type="Date" name="date" id="textfield2" required></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" class="form-control" name="address" id="textfield3" value="{{ data[6] }}" required></td>
+      </tr>
+      <tr>
+        <td height="52">Mobile number</td>
+        <td>
+        <input type="text" class="form-control" name="mobile" id="textfield4" value="{{ data[7] }}" pattern="[0-9]{10}" required><br>: xxxx xxx xxx :</td>
+      </tr>
+      <!-- <tr>
+        <td height="44">Password</td>
+        <td>
+        <input type="text" class="form-control" name="password" id="textfield5" required></td>
+      </tr> -->
+      <tr>
+        <td colspan="2" align="center"><input class="btn btn-success" type="submit" name="submit" id="submit" value="Save Changes"></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+</form>
+ 
+           {% endblock %}
+

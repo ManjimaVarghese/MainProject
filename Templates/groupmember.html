@@ -1,0 +1,28 @@
+{% extends "index/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post">
+  <a href="/share" class="btn btn-success">OK</a> 
+  <br>
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th>S.No</td>
+        <!-- <th width="126">Group Id</td> -->
+        <th width="124">Name</td>
+        <th width="85">
+        
+      </tr>
+       {% for row in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td hidden>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+       <td width="50px"><a class="btn btn-info" href="/shared/{{row[0]}}/{{fileid}}">Share</a></td>
+      </tr> 
+      {% endfor%}
+      <!--</tbody>-->
+    <tr>
+                   
+  </table>
+</form>
+{% endblock %}

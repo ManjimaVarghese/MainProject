@@ -1,0 +1,40 @@
+{% extends "index/index.html" %}
+{% block body %}
+
+<form action="view_profile" methods="post">
+    <table class="table table-bordered">
+        <tr>
+            <img src="{{ data[2] }}" width="25%"/>
+        </tr>
+        
+        <tr><td hidden><input name="id" type="hidden" value="{{ data[0] }}"/>{{ data[0] }}</td>
+            <td>Name</td>
+            <td>{{ data[1] }}</td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td>{{ data[5] }}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{ data[4] }}</td>
+        </tr>
+        <!-- <tr>
+            <td>Photo</td>
+            <td>{{ data[2] }}</td>
+        </tr> -->
+        <tr>
+            <td>Contact</td>
+            <td><p>{{ data[7] }}</p><p>{{ data[3] }}</p></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{ data[6] }}</td>
+        </tr>
+        <tr><td colspan="2" align="center">
+            <a class="btn btn-info" href="edit_profile">Edit</a>
+        </td></tr>
+    </table>
+</form>
+
+{% endblock %}
